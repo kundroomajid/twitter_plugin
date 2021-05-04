@@ -115,8 +115,8 @@ if some error occurs like ``sqlalchemy.exc`` exception type following command
 ```bash
 ~$ airflow scheduler
 ```
-#step12
-####Steps if airflow is allready installed
+
+#### Steps if airflow is allready installed
 12. Now we need to add few required airflow variables and airflow connections using airflow UI.
 - ``twitter_plugin`` requires a ``config`` variable (An Airflow Variable) which contains few details like:
     * ``twitter_account_id`` : twitter account id of @diprjk
