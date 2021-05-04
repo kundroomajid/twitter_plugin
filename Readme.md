@@ -16,7 +16,7 @@ Installation of airflow is simple, you can find installation details for airflow
 
 This plugins is tested with airflow v 1.10.9.
  
- if you have airflow allready installed then jump to [Step 12](#step12)
+ if you have airflow allready installed then jump to [Step 12](#steps-if-airflow-is-allready-installed)
 
 ### Steps
 
