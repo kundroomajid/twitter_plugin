@@ -51,15 +51,15 @@ or
  * Now use the following command to open an editor
 
 ```bash
-~$ nano {project_path}/{name_of_virtual_env}/bin/activate
+~$ nano ./{name_of_virtual_env}/bin/activate
 ```
 
 This will open a bash script, scroll to the end of the file and paste the following lines at the end of the file
-where {project_path} is full path of your project and {name_of_virtual_env } is the name given to your virtual environment.
+where {full_project_path} is full path of your project and {name_of_virtual_env } is the name given to your virtual environment.
  ```bash
 
 #This is for AIRFLOW usage
-export AIRFLOW_HOME=/{project_path}
+export AIRFLOW_HOME=/{full_project_path}
 ```
 
 press CTRL+X and y, to close the editor
@@ -73,31 +73,27 @@ press CTRL+X and y, to close the editor
 5. Now install airflow using pip inside virtual env
 ```bash
 ~$ pip install apache-airflow==1.10.9
+~$ pip install SQLAlchemy==1.3.15
 ```
 6. Check if airflow is sucessfully installed or not. Type following command inside terminal
  ```bash
 ~$ airflow version
 ```
-if some error occurs like ``sqlalchemy.exc`` exception type following command
- 
- ```bash
-~$ pip install SQLAlchemy==1.3.15
-~$ pip install Flask-SQLAlchemy==2.4.4
-```
 
 7. create a new folder ``plugins`` inside our project home
  ```bash
 ~$ mkdir plugins
+~$ cd plugins
 ```
 
 8. Now clone this repo inside ``plugins`` directory 
  ```bash
-~$ git clone https://
+~$ git clone https://github.com/kundroomajid/twitter_plugin.git
 ```
 9. To install twitter_plugin dependencies, we prefer installation using ``requirements.txt`` file. Enter the following command to install  other dependent packages required for our twitter_plugin
 
 ```bash
-~$ pip install -r /plugins/twitter_plugin/requirements.txt
+~$ pip install -r ./twitter_plugin/requirements.txt
 ```
 10. Once all the dependencies are installed, its time to initialize your ``airflow`` meta-database
 
@@ -153,6 +149,8 @@ if some error occurs like ``sqlalchemy.exc`` exception type following command
     * ``NOTE :`` Create an Airflow Connection named ``extract_table_default`` using Airflow UI, leave all fields blank put your extracttable API key inside password field.
     
  13. Now copy ``dag_tweet_etl.py`` from ``twitter_plugin/example_dags/`` to ``project directory/dags``
+
+if dags directory is not avalaible please create one inside project root.
  
  14. And we are good to go.
 
