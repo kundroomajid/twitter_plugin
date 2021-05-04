@@ -1,4 +1,5 @@
-#Overview
+# Overview
+
 This project is actually a collection of custom operators,hooks and sensors.
 
 The example dag with this repo will be scheduled daily at 3.00 P.M IST and will try to fetch tweets from @diprjk twitter handle which is the Official Twitter handle of Department of Information and Public Relations, Govt of Jammu & Kashmir. The DAG uses a custom sensor to sense tweet related to daily COVID update of J&K.
@@ -15,7 +16,7 @@ Installation of airflow is simple, you can find installation details for airflow
 
 This plugins is tested with airflow v 1.10.9.
  
- if you have airflow allready installed then jump to [Step 12](#steps-if-airflow-is-allready-installed)
+ if you have airflow allready installed then jump to [Step 12](#step12)
 
 ### Steps
 
@@ -114,6 +115,7 @@ if some error occurs like ``sqlalchemy.exc`` exception type following command
 ```bash
 ~$ airflow scheduler
 ```
+#step12
 ####Steps if airflow is allready installed
 12. Now we need to add few required airflow variables and airflow connections using airflow UI.
 - ``twitter_plugin`` requires a ``config`` variable (An Airflow Variable) which contains few details like:
