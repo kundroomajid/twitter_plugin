@@ -151,8 +151,21 @@ press CTRL+X and y, to close the editor
  13. Now copy ``dag_tweet_etl.py`` from ``twitter_plugin/example_dags/`` to ``project directory/dags``
 
 if dags directory is not avalaible please create one inside project root.
+
+14. Also we need to add smtp server details in ``airflow.cfg`` file to recieve email alerts like
+``` bash
+# smtp server here
+smtp_host = smtp.gmail.com
+smtp_starttls = True
+smtp_ssl = False
+# Example: smtp_user = airflow
+smtp_user = yoursmtpemailid
+smtp_password = yourpassword
+smtp_port = 587
+smtp_mail_from = airflow@example.com
+```
  
- 14. And we are good to go.
+ 15. And we are good to go.
 
 
 
